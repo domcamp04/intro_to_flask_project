@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>What you've been waiting for!</h1>
+
+<p>Here they are:</p>
+<ul>
+    {% for f in favorites %}
+        {% if f == 'Elo' %}
+        <li>{{ f.upper() }}</li>
+        {% else %}
+        <li>{{ f.title() }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+
+{% endblock %}
